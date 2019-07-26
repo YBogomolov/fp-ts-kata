@@ -1,0 +1,41 @@
+{
+  "name": "fp-ts-kata",
+  "version": "0.0.1",
+  "description": "Code kata for fp-ts",
+  "main": "index.js",
+  "scripts": {
+    "test": "ts-mocha -p ./tsconfig.json src/**/*.test.ts",
+    "test:answers": "ts-mocha -p ./tsconfig.json answers/**/*.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YBogomolov/fp-ts-kata.git"
+  },
+  "keywords": [
+    "typescript",
+    "kata",
+    "functional",
+    "fp",
+    "fp-ts"
+  ],
+  "author": "Yuriy Bogomolov <yuriy.bogomolov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YBogomolov/fp-ts-kata/issues"
+  },
+  "homepage": "https://github.com/YBogomolov/fp-ts-kata#readme",
+  "dependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/expect": "^1.20.4",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.6.8",
+    "chai": "^4.2.0",
+    "fast-check": "^1.16.0",
+    "fp-ts": "^2.0.3",
+    "mocha": "^6.2.0",
+    "ts-mocha": "^6.0.0",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  }
+}
