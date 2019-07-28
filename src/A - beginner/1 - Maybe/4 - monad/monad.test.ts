@@ -4,6 +4,16 @@ import * as fc from 'fast-check';
 import { just, maybe, nothing } from './maybe';
 
 describe('Maybe kata', () => {
+  describe('Flatten', () => {
+    it('should rip off one layer', () => {
+      fc.assert(fc.property(fc.anything(), (anything) => {
+        expect(maybe.flatten(nothing)).to.deep.equal(nothing);
+        expect(maybe.flatten(just(nothing))).to.deep.equal(nothing);
+        expect(maybe.flatten(just(just(anything)))).to.deep.equal(just(anything));
+      }));
+    });
+  });
+
   describe('Monad laws', () => {
     it('Associativity', () => {
       fc.assert(fc.property(fc.anything(), (anything) => {

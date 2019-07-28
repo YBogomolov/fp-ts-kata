@@ -1,7 +1,7 @@
 import { throwNIE } from '../../../throw';
 import { fmap } from '../1 - functor/maybe';
 import { Maybe } from '../1 - functor/maybe';
-import { of } from '../3 - applicative/maybe';
+import { of } from '../2 - applicative/maybe';
 
 export { Maybe, just, nothing } from '../1 - functor/maybe';
 
@@ -11,7 +11,7 @@ export const chain = <A, B>(_f: (a: A) => Maybe<B>) => (_ma: Maybe<A>): Maybe<B>
 
 // Monad instance for Maybe container:
 export const maybe = {
-  map: fmap,
+  fmap,
   of,
   chain,
   flatten,
