@@ -6,7 +6,7 @@ import { just, maybe, nothing } from './maybe';
 
 describe('Maybe kata', () => {
   describe('Functor laws', () => {
-    it('Composition preservation: fmap f • fmap g ≅ fmap (f • g)', () => {
+    it('Composition preservation', () => {
       fc.assert(fc.property(fc.anything(), (anything) => {
         const f = <A>(a: A) => String(a);
         const g = (s: string) => s.length;
@@ -25,7 +25,7 @@ describe('Maybe kata', () => {
       }));
     });
 
-    it('Identity preservation: fmap id ≅ id', () => {
+    it('Identity preservation', () => {
       fc.assert(fc.property(fc.anything(), (anything) => {
         expect(
           maybe.map(identity)(nothing),
